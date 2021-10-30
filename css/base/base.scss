@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+    --light-cyan: hsl(185, 41%, 84%);
+    --normal-cyan: hsl(172, 67%, 45%);
+    --dark-cyan: hsl(183, 100%, 15%);
+
+    --soft-gray: hsl(184, 14%, 56%);
+    --drk-gray: hsl(186, 14%, 43%);
+
+    --light-gray: hsl(189, 41%, 97%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    background-color: var(--light-cyan);
+    display: grid;
+    place-items: center;
+    .logo {
+        padding: 1.5rem;
+        width: 7rem;
+    }
+    .main-container {
+        background-color: white;
+        padding: 1rem;
+        border-top-right-radius: 2rem;
+        border-top-left-radius: 2rem;
+    }
+    .label {
+        color: var(--drk-gray);
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { 
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        margin: 0; 
+    }
+    input {
+        padding: .2rem;
+        padding-left: 2rem;
+        border-radius: .3rem;
+        background-color: var(--light-gray);
+        width: 100%;
+        border: 2px solid transparent;
+        outline: none;
+        caret-color: var(--dark-cyan);
+        font-family: inherit;
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: var(--dark-cyan);
+        text-align: right;
+        &:focus {
+            border: 2px solid var(--normal-cyan);
+            caret-color: var(--dark-cyan);
+        }
+    }
+    .form-control {
+        position: relative;
+    }
+    .icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: var(--drk-cyan);
+        padding: 1rem;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        .logo {
+            padding: 1rem;
+            width: 8rem;
+        }
+        input {
+            padding: .4rem;
+        }
+        .icon {
+            padding: 1.2rem;
+        }
+    }
+}
+

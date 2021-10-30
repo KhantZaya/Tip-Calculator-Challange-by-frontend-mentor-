@@ -1,0 +1,112 @@
+@import "base/base.scss";
+
+body {
+    height: 100vh;
+    overflow: auto;
+    .main-container {
+        .compute-section {
+            .input-bill-section {
+                margin-bottom: 1.3rem;
+            }
+            .select-tip-section {
+                margin-bottom: 1.3rem;
+                .select-tip {
+                    display: grid;
+                    grid-gap: .9rem;
+                    margin: 0 auto;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 1fr 1fr 1fr;
+                    .tip {
+                        background-color: var(--dark-cyan);
+                        color: white;
+                        width: 100%;
+                        border: none;
+                        border-radius: .3rem;
+                        height: 2.5rem;
+                        font-size: 1.3rem;
+                        font-weight: 700;
+                        &:hover {
+                            opacity: .9;
+                        }
+                    }
+                    .active  {
+                         background-color: var(--normal-cyan);
+                         color: var(--dark-cyan);
+                    }
+                    .custom-tip {
+                        background-color: var(--light-gray);
+                        color: var(--drk-gray);
+                        text-align: right;
+                    }
+                }
+            }
+            .numberOfPeople-section {
+                margin-bottom: 1.4rem;
+            }
+        }
+        .result-section {
+            background-color: var(--dark-cyan);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            .result {
+                margin-bottom: 1.5rem;
+                .label {
+                    color: white;
+                }
+                span {
+                    font-size: .9rem;
+                    color: var(--soft-gray);
+                    margin: 0;
+                }
+                .amount-result {
+                    float: right;
+                    align-items: center;
+                    color: var(--normal-cyan);
+                }
+            }
+            .reset-btn {
+                width: 100%;
+                padding: .6rem;
+                border: none;
+                border-radius: .3rem;
+                font-weight: 700;
+                font-size: 1rem;
+                background-color: var(--normal-cyan);
+                color: var(--dark-cyan);
+                &:hover {
+                    opacity: .8;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 800px) {
+    body {
+
+        .main-container {
+            border-radius: 2rem;
+            display: flex;
+            .compute-section {
+                width: 50%;
+                margin-right: 2rem;
+                .select-tip-section {
+                    .select-tip {
+                        .tip {
+                            height: 3rem;
+                        }
+                    }
+                }
+            }
+            .result-section {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                .reset-btn {
+                    margin-bottom: auto;
+                    display: block;
+                    margin-top: 11rem;
+                }
+            }
+        }
+    }    
+}
