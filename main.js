@@ -21,8 +21,8 @@ tipBtn.forEach( (btn) => {
         }else {
             removeActive()
             btn.classList.add('active')
+            tip = btn.value
         }
-        tip = btn.value
         console.log(tip);
         calculate()
     })
@@ -48,7 +48,8 @@ resetBtn.addEventListener('click', () => {
 function calculate () {
     if (amount >= 0 && amount != "") {
         let totalTip = (amount * tip / 100) / ppl
-        let totalAmount = (amount + Number(tip)) / ppl
+        let totalAmount = (amount / ppl) + (totalTip)
+
     
         tipResult.innerHTML = `$${totalTip.toFixed(2)}`
         totalResult.innerHTML = `$${totalAmount.toFixed(2)}`
